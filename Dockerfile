@@ -1,7 +1,7 @@
 FROM node:10-alpine
 
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /var/www/todoapp
 
 # Bundle app source
 COPY . .

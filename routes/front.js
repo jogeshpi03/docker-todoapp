@@ -8,16 +8,9 @@ router.get('/', (req, res) => {
 
     Todo.find({}, (err, todos) => {
 
-        if(Object.keys(todos).length > 0) {
-            res.render("todos", {
-                tasks: todos
-            });
-        }
-        else {
-            res.render("todos", {
-                tasks: {}
-            });
-        }
+        res.render("todos", {
+            tasks: (Object.keys(todos).length > 0 ? todos : {})
+        });
     });
 });
 

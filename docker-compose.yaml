@@ -13,8 +13,6 @@ services:
     environment:
       - NODE_ENV=development
       - PORT=3000
-    command: 
-      sh -c 'npm i && node server.js'
   
   mongo:
     image: mongo
