@@ -1,0 +1,23 @@
+{
+  "name": "docker-todoapp",
+  "version": "1.0.0",
+  "description": "Todo app with Node.js and mongodb",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Jogesh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.6.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

@@ -1,0 +1,23 @@
+version: '3'
+services:
+  todoapp:
+    container_name: todoapp
+    restart: always
+    build: ./
+    volumes:
+      - ./:/var/www/todoapp
+    links:
+      - mongo
+    ports:
+      - 3000:3000
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+    command: 
+      sh -c 'npm i && node server.js'
+  
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
